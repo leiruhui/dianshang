@@ -1,0 +1,62 @@
+.my-content{
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: 44px;
+    bottom: 50px;
+    background-color:#f5f5f5;
+}
+.left,.right{
+    height: 100%;
+    position: relative;
+
+}
+.left{
+    float: left;
+    width: 80px;
+}
+.right{
+    margin-left: 90px;
+}
+.left .links{
+    background-color: #FFFFFF;
+}
+.left .links a{
+    display: block;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+}
+/*.left .links a:hover{*/
+    /*background-color: #f5f5f5;*/
+    /*border-right: 1px solid transparent;*/
+    /*border-bottom: 1px solid transparent;*/
+/*}*/
+.left .links .active{
+    background-color: #f5f5f5;
+    border-right: 1px solid transparent;
+}
+.right .brand-list{
+    margin-top: 10px;
+    background-color: #FFFFFF;
+}
+.right .brand-list li{
+    float: left;
+    width: 33.33%;
+}
+.right .brand-list li a{
+    display: block;
+}
+.right .brand-list img{
+    width: 100%;
+}
+.right .brand-list p{
+    text-align: center;
+}
+.noresult{
+    padding: 10px;
+    font-size: 14px;
+    color: #f20;
+}
