@@ -4,7 +4,9 @@ var page = 1;
 //页面中的数据
 var html = '';
 //价格排序顺序 升序
- var priceSort = 1;
+var priceSort = 1;
+
+var This = null;
 $(function(){
         //1.获取到地址栏中用户所输入的关键字
         //2.用关键字调取搜索的关键字
@@ -55,7 +57,9 @@ function getParamsByUrl(url , name){
     }
 };
 function getData(){
-        var This = this;
+    if(!This){
+        This = this;
+    }
     $.ajax({
         url:'/product/queryProduct',
         type:'get',

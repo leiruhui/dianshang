@@ -31,8 +31,10 @@ $(function(){
     if(localStorage.getItem ('keyarr')){
         //再把字符串转换成数组显示到页面上
         keyarr = JSON.parse(localStorage.getItem ('keyarr'));
+        console.log(keyarr);
         //把template和html进行拼接
         var html = template('historyTpl',{result:keyarr});
+        console.log(html);
         $('#history-box').html(html);
         //console.log(html);
         //console.log(keyarr);
@@ -40,9 +42,10 @@ $(function(){
 
       //1.给元素添加点击事件
       //2.清除页面数据,清除本地浏览器数据
-    $('#clearBtn').on('click',function(){
+    $('#clearBtn').on('tap',function(){
         //清除页面数据
         $('#history-box').html('');
+        keyarr= [];
         localStorage.removeItem('keyarr');
     })
 });
