@@ -70,6 +70,7 @@ function getData(){
             price:priceSort
         },
         success:function(response){
+            console.log(response);
             if(response.data.length>0){
                 html+= template('searchTpl',response);
                 console.log(html);
