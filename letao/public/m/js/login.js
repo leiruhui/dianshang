@@ -26,9 +26,9 @@ $(function(){
                 $('#login-btn').html('正在登录...')
             },
             success:function(res){
-                //if(!password){
-                //    $('#login-btn').html("登录")
-                //}
+                if(!password){
+                    $('#login-btn').html("登录")
+                }
                 console.log(res.error);
                     if(res.error != 403){
                         mui.toast('登录成功');
