@@ -47,4 +47,12 @@ $(function(){
             }
         })
     })
-})
+
+    if(localStorage.getItem('editAddress')){
+        var address =  JSON.parse(localStorage.getItem('editAddress'));
+        console.log(address);
+        var html = template('editTpl',address);
+        console.log(html)
+        $('#editForm').html(html);
+    }
+});

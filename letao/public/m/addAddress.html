@@ -17,6 +17,7 @@
     <script src="./js/city.js"></script>
     <script src="./js/addAddress.js"></script>
     <script src="./js/public.js"></script>
+    <script src="./assets/artTemplate/template-native.js"></script>
 
 </head>
 <body>
@@ -43,23 +44,26 @@
     </a>
 </nav>
 <div class="mui-content">
-    <form class="mui-input-group">
-        <div class="mui-input-row">
-            <input type="text" class="mui-input-clear" placeholder="请输入收货人姓名" name="username">
-        </div>
-        <div class="mui-input-row">
-            <input type="text" class="mui-input-clear" placeholder="请输入邮政编码" name="postCode">
-        </div>
-        <div class="mui-input-row">
-            <input type="text" class="mui-input-clear" placeholder="请选择省市区 " id="selectCity" name="city">
-        </div>
-        <div class="mui-input-row">
-            <input type="text" class="mui-input-clear" placeholder="请输入详细地址" name="detail">
-        </div>
-        <div class="mui-button-row">
-            <button type="button" class="mui-btn mui-btn-primary" id="addAddress" >确认</button>
-        </div>
+    <form class="mui-input-group" id="editForm">
+
     </form>
 </div>
+<script id="editTpl" type="text/template">
+    <div class="mui-input-row">
+        <input type="text" class="mui-input-clear" placeholder="请输入收货人姓名" name="username" value="<%=recipients%>">
+    </div>
+    <div class="mui-input-row">
+        <input type="text" class="mui-input-clear" placeholder="请输入邮政编码" name="postCode" value="<%=postCode%>">
+    </div>
+    <div class="mui-input-row">
+        <input type="text" class="mui-input-clear" placeholder="请选择省市区 " id="selectCity" name="city" value="<%=address%>">
+    </div>
+    <div class="mui-input-row">
+        <input type="text" class="mui-input-clear" placeholder="请输入详细地址" name="detail" value="<%=addressDetail%>">
+    </div>
+    <div class="mui-button-row">
+        <button type="button" class="mui-btn mui-btn-primary" id="addAddress" >确认</button>
+    </div>
+</script>
 </body>
 </html>
